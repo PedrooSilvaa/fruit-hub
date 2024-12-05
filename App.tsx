@@ -1,13 +1,13 @@
 
 import { ScrollView, View } from "@gluestack-ui/themed";
-import WelcomePage from "./src/page/WelcomePage";
+import HomeOne from "./src/page/HomeOne";
 
 
 export default function App() {
   return (
     <View>
-      <WelcomePage>
-      </WelcomePage>
+      <HomeOne>
+      </HomeOne>
     </View>
   );
 }
