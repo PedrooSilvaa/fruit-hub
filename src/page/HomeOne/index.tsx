@@ -1,11 +1,13 @@
-import { Icon, Image, Input, InputField, InputIcon, InputSlot, MenuIcon, Text, VStack, View } from "@gluestack-ui/themed";
-import { Menu, Search, ShoppingBag, ShoppingBagIcon } from "lucide-react-native";
+
+import { Icon, Image, Input, InputField, InputIcon, InputSlot, MenuIcon, ScrollView, Text, VStack, View } from "@gluestack-ui/themed";
+import { Filter, FilterIcon, FilterX, FilterXIcon, Menu, Search, ShoppingBag, ShoppingBagIcon } from "lucide-react-native";
+import BoxProduct from "../../components/BoxProduct";
 
 
 function HomeOne(){
 
     return(
-        <View backgroundColor="pink" height={'100%'} paddingTop={60} paddingHorizontal={24}>
+        <ScrollView backgroundColor="pink" height={'100%'} paddingTop={60} paddingHorizontal={24}>
             <View height={100}  display="flex" justifyContent="space-between" alignItems="flex-start" flexDirection="row">
                 <Icon as={Menu} color="black" size={40}/>
                 <VStack justifyContent="center" alignItems="center">
@@ -20,7 +22,7 @@ function HomeOne(){
                 </Text>
             </View>
 
-            <View paddingTop={24}>
+            <View paddingTop={24} flexDirection="row" width={'100%'} alignItems="center" justifyContent="space-between">
                 <Input paddingHorizontal={10} borderRadius={10} gap={10} alignItems="center" flexDirection="row" height={56} backgroundColor="#F3F1F1">
                     <InputSlot height={30}>
                         <InputIcon>
@@ -33,9 +35,22 @@ function HomeOne(){
                         fontWeight={'regular'}
                     />
                 </Input>
+                <Icon as={Filter} color="black" size={40}/>
             </View>
 
-        </View>
+            <View paddingTop={40}>
+                <View>
+                    <Text fontSize={24} fontWeight={'medium'} color="#27214D">Recommended Combo</Text>
+                </View>
+
+                <View paddingTop={24} flexDirection="row" flexWrap="wrap" gap={23} justifyContent="center">
+                    <BoxProduct/>
+                    <BoxProduct/>
+                </View>
+
+            </View>
+
+        </ScrollView>
     );
 
 }
