@@ -2,6 +2,7 @@ import { Box, Icon, Image, Text, View } from "@gluestack-ui/themed";
 import ButtonBack from "../../components/ButtonBack";
 import { Heart, MinusCircle, PlusCircle } from "lucide-react-native";
 import { TouchableOpacity } from "react-native";
+import Button from "../../components/Button";
 
 export default function AddToBraket(){
     return (
@@ -39,21 +40,10 @@ export default function AddToBraket(){
                 <View paddingTop={24}>
                     <Text fontSize={16}>If you are looking for a new fruit salad to eat today, quinoa is the perfect brunch for you. make</Text>
                     <View flexDirection="row" width={'100%'} justifyContent="space-between" paddingTop={40}>
-                        <View backgroundColor="#FFF7F0" borderRadius={50} alignItems="center" width={50} padding={10}>
+                        <View backgroundColor="#FFF7F0" borderRadius={50} alignItems="center" justifyContent="center" width={50} height={50}>
                             <Icon as={Heart} color="#FFA451" size={30}/>
                         </View>
-                        <TouchableOpacity>
-                            <Box
-                                backgroundColor="#FFA451"
-                                borderRadius={10}
-                                width={220}
-                                height={56}
-                                alignItems="center"
-                                justifyContent="center"
-                            >
-                                <Text color="white" fontSize={16} fontWeight={"medium"}>Start Ordering</Text>
-                            </Box>
-                        </TouchableOpacity>
+                        <Button text="Add to Braket" size="220"/>
                     </View>
                 </View>
             </View>

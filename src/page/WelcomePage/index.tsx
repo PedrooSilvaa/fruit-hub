@@ -20,7 +20,7 @@ function WelcomePage(){
                     </Input>
                 </View>
                 <View width={"80%"}>
-                    <Button></Button>
+                    <Button text="Start Ordering" size="100%"></Button>
                 </View>
             </View>
         </View>
