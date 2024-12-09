@@ -2,12 +2,13 @@
 import { Icon, Image, Input, InputField, InputIcon, InputSlot, MenuIcon, ScrollView, Text, VStack, View } from "@gluestack-ui/themed";
 import { Filter, FilterIcon, FilterX, FilterXIcon, Menu, Search, ShoppingBag, ShoppingBagIcon } from "lucide-react-native";
 import BoxProduct from "../../components/BoxProduct";
+import BoxProductColor from "../../components/BoxProductColor";
 
 
 function HomeOne(){
 
     return(
-        <ScrollView backgroundColor="pink" height={'100%'} paddingTop={60} paddingHorizontal={24}>
+        <ScrollView backgroundColor="#F3F4F9" height={'100%'} paddingTop={60} paddingHorizontal={24}>
             <View height={100}  display="flex" justifyContent="space-between" alignItems="flex-start" flexDirection="row">
                 <Icon as={Menu} color="black" size={40}/>
                 <VStack justifyContent="center" alignItems="center">
@@ -47,7 +48,23 @@ function HomeOne(){
                     <BoxProduct/>
                     <BoxProduct/>
                 </View>
+            </View>
 
+            <View paddingTop={48}>
+                <View flexDirection="row" width={'100%'} justifyContent="space-between" alignItems="center">
+                    <Text color="#27214D" fontSize={24} borderBottomWidth={5} borderBottomColor="#FFA451" borderBottomEndRadius={'100%'}>Hottest</Text>
+                    <Text color="#938DB5" fontWeight={'medium'} fontSize={16}>Popular</Text>
+                    <Text color="#938DB5" fontWeight={'medium'} fontSize={16}>New Combo</Text>
+                    <Text color="#938DB5" fontWeight={'medium'} fontSize={16}>Top</Text>
+                </View>
+                <ScrollView horizontal>
+                    <View flexDirection="row" gap={10} width={'100%'} paddingTop={24}>
+                        <BoxProductColor color="#FFFAEB"/>
+                        <BoxProductColor color="#FEF0F0"/>
+                        <BoxProductColor color="#FFFAEB"/>
+                        <BoxProductColor color="#FEF0F0"/>
+                    </View>
+                </ScrollView>
             </View>
 
         </ScrollView>
