@@ -26,8 +26,8 @@ export default function AddToBraket(){
                             <Icon as={PlusCircle} color="#FFA451" size={32}/>
                         </View>
                         <View flexDirection="row" gap={5} alignItems="center">
-                            <Image source={require("../../../assets/coin.png")} height={15}/>
-                            <Text color="#F08626" fontSize={24}>2,000</Text>
+                            <Image source={require("../../../assets/coin-black.png")} height={15}/>
+                            <Text fontSize={24}>2,000</Text>
                         </View>
                     </View>
                 </View>
