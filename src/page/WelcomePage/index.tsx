@@ -8,7 +8,7 @@ function WelcomePage(){
             <View backgroundColor="#FFA451" width={"100%"} height={'60%'} display="flex" alignItems="center" justifyContent="flex-end" paddingBottom={50}>
                 <Image source={require('../../../assets/fruit-two.png')}/>
             </View>
-            <View height={"40%"} display="flex" alignItems="center" justifyContent="flex-start" paddingTop={40} width={'100%'} gap={42}>
+            <View height={"40%"} display="flex" alignItems="center" justifyContent="flex-start" paddingTop={40} width={'100%'} gap={42} backgroundColor="white">
                 <View gap={15} width={'80%'}>
                     <Text fontSize={20} fontWeight={"medium"} color="#27214D">What is your firstname?</Text>
                     <Input paddingHorizontal={10} borderRadius={10} justifyContent="center" height={56} backgroundColor="#F3F1F1">
