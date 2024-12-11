@@ -1,15 +1,16 @@
 import { Box, Text, View } from "@gluestack-ui/themed";
+import { PressableProps } from "react-native";
 import { TouchableOpacity } from "react-native";
 
-interface ButtonProps{
+interface ButtonProps extends PressableProps{
   text: string;
   size: string;
 }
 
-function Button( {text, size} : ButtonProps){
+function Button( {text, size, onPress} : ButtonProps){
     return(
         <View>
-            <TouchableOpacity>
+            <TouchableOpacity onPress={onPress}>
               <Box
                 backgroundColor="#FFA451"
                 borderRadius={10}

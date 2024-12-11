@@ -1,7 +1,10 @@
 import { Image, Input, InputField, Text, View } from "@gluestack-ui/themed";
 import Button from "../../components/Button";
+import { useNavigation } from "@react-navigation/native";
 
 function WelcomePage(){
+
+    const navigate = useNavigation();
 
     return(
         <View height={'100%'} display="flex" alignItems="center">
@@ -20,7 +23,7 @@ function WelcomePage(){
                     </Input>
                 </View>
                 <View width={"80%"}>
-                    <Button text="Start Ordering" size="100%"></Button>
+                    <Button text="Start Ordering" size="100%" onPress={() => navigate.navigate("Home")}></Button>
                 </View>
             </View>
         </View>
