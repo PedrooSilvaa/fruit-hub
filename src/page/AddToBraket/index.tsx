@@ -3,13 +3,20 @@ import ButtonBack from "../../components/ButtonBack";
 import { Heart, MinusCircle, PlusCircle } from "lucide-react-native";
 import { TouchableOpacity } from "react-native";
 import Button from "../../components/Button";
+import { PressableProps } from "react-native";
+import { useNavigation } from "@react-navigation/native";
 
-export default function AddToBraket(){
+interface AddProps extends PressableProps{
+
+}
+
+export default function AddToBraket({onPress} : AddProps){
+    const navigate = useNavigation();
     return (
         <View backgroundColor="#FFA451" height={'100%'} gap={20}>
             <View paddingTop={64}  paddingHorizontal={24} justifyContent="space-between" height={320} alignItems="center" paddingBottom={24}>
                 <View width={'100%'}>
-                    <ButtonBack/>
+                    <ButtonBack onPress={() => navigate.goBack()}/>
                 </View>
                 <Image source={require('../../../assets/plate-one.png')} width={176} height={176}/>
             </View>
@@ -43,7 +50,7 @@ export default function AddToBraket(){
                         <View backgroundColor="#FFF7F0" borderRadius={50} alignItems="center" justifyContent="center" width={50} height={50}>
                             <Icon as={Heart} color="#FFA451" size={30}/>
                         </View>
-                        <Button text="Add to Braket" size="220"/>
+                        <Button text="Add to Braket" size="220" onPress={() => navigate.navigate("OrderList")}/>
                     </View>
                 </View>
             </View>

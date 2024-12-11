@@ -1,7 +1,12 @@
 import { Icon, Image, Text, View } from "@gluestack-ui/themed";
 import { Heart } from "lucide-react-native";
+import { PressableProps, TouchableOpacity } from "react-native";
 
-function BoxProduct(){
+interface BoxProductProps extends PressableProps{
+
+}
+
+function BoxProduct({onPress} : BoxProductProps){
 
     return(
         <View padding={10} backgroundColor="white" width={152} height={183} justifyContent="center" alignItems="center" borderRadius={16}>
@@ -17,7 +22,9 @@ function BoxProduct(){
                     <Image source={require('../../../assets/coin.png')}/>
                     <Text fontSize={14} fontWeight={'regular'} color="#F08626">2,000</Text>
                 </View>
-                <Image source={require('../../../assets/add.png')}/>
+                <TouchableOpacity onPress={onPress}>
+                    <Image source={require('../../../assets/add.png')}/>
+                </TouchableOpacity>
             </View>
         </View>
     )

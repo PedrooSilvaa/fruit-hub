@@ -3,18 +3,24 @@ import { Icon, Image, Input, InputField, InputIcon, InputSlot, MenuIcon, ScrollV
 import { Filter, FilterIcon, FilterX, FilterXIcon, Menu, Search, ShoppingBag, ShoppingBagIcon } from "lucide-react-native";
 import BoxProduct from "../../components/BoxProduct";
 import BoxProductColor from "../../components/BoxProductColor";
+import { TouchableOpacity } from "react-native";
+import { useNavigation } from "@react-navigation/native";
 
 
 function HomeOne(){
+
+    const navigate = useNavigation();
 
     return(
         <ScrollView backgroundColor="#F3F4F9" height={'100%'} paddingTop={60} paddingHorizontal={24}>
             <View height={100}  display="flex" justifyContent="space-between" alignItems="flex-start" flexDirection="row">
                 <Icon as={Menu} color="black" size={40}/>
+            <TouchableOpacity onPress={() => navigate.navigate("OrderList")}>  
                 <VStack justifyContent="center" alignItems="center">
                     <Icon as={ShoppingBag} color="#FFA451" size={40}/>
                     <Text>My Basket</Text>
                 </VStack>
+            </TouchableOpacity>
             </View>
 
             <View>
@@ -45,8 +51,8 @@ function HomeOne(){
                 </View>
 
                 <View paddingTop={24} flexDirection="row" flexWrap="wrap" gap={23} justifyContent="center">
-                    <BoxProduct/>
-                    <BoxProduct/>
+                    <BoxProduct onPress={() => navigate.navigate("AddToBraket")}/>
+                    <BoxProduct onPress={() => navigate.navigate("AddToBraket")}/>
                 </View>
             </View>
 
@@ -59,10 +65,10 @@ function HomeOne(){
                 </View>
                 <ScrollView horizontal>
                     <View flexDirection="row" gap={10} width={'100%'} paddingTop={24}>
-                        <BoxProductColor color="#FFFAEB"/>
-                        <BoxProductColor color="#FEF0F0"/>
-                        <BoxProductColor color="#FFFAEB"/>
-                        <BoxProductColor color="#FEF0F0"/>
+                        <BoxProductColor color="#FFFAEB" onPress={() => navigate.navigate("AddToBraket")}/>
+                        <BoxProductColor color="#FEF0F0" onPress={() => navigate.navigate("AddToBraket")}/>
+                        <BoxProductColor color="#FFFAEB" onPress={() => navigate.navigate("AddToBraket")}/>
+                        <BoxProductColor color="#FEF0F0" onPress={() => navigate.navigate("AddToBraket")}/>
                     </View>
                 </ScrollView>
             </View>

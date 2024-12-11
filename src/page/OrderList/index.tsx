@@ -4,9 +4,10 @@ import ItemRow from "../../components/ItemRow";
 import Button from "../../components/Button";
 import { TouchableOpacity } from "react-native";
 import { useState } from "react";
+import { useNavigation } from "@react-navigation/native";
 
 export default function OrderList(){
-
+    const navigate = useNavigation();
     const [modal, setModal] = useState(false);
     const [modalCard, setModalCard] = useState(false);
 
@@ -17,7 +18,7 @@ export default function OrderList(){
     return (
         <View paddingTop={70} backgroundColor="#FFA451" height={'100%'} >
             <View paddingHorizontal={24} paddingBottom={40} flexDirection="row" alignItems="center" width={'70%'} justifyContent="space-between">
-                <ButtonBack/>
+                <ButtonBack onPress={() => navigate.navigate("Home")}/>
                 <Text fontSize={24} color="white">My Basket</Text>
             </View>
 
@@ -89,7 +90,7 @@ export default function OrderList(){
                         </Input>
                     </View>
                     <View flexDirection="row" justifyContent="space-between" paddingHorizontal={24} paddingTop={40}>
-                        <TouchableOpacity>
+                        <TouchableOpacity onPress={() => navigate.navigate('TrackOrder')}>
                             <Box
                                 borderColor="#FFA451"
                                 borderWidth={2}
@@ -173,7 +174,7 @@ export default function OrderList(){
                     </View>
                     </View>
                     <View paddingHorizontal={24} height={170} marginTop={60} alignItems="center" backgroundColor="#FFA451" justifyContent="center">
-                        <TouchableOpacity onPress={() => setModalCard(false)}>
+                        <TouchableOpacity onPress={() => navigate.navigate('TrackOrder')}>
                             <Box
                                 backgroundColor="white"
                                 borderRadius={10}

@@ -1,11 +1,13 @@
 import { Image, Text, View } from "@gluestack-ui/themed";
 import ButtonBack from "../../components/ButtonBack";
+import { useNavigation } from "@react-navigation/native";
 
 export default function TrackOrder(){
+    const navigate = useNavigation();
     return(
         <View paddingTop={70} backgroundColor="#FFA451" height={'100%'}>
             <View paddingHorizontal={24} paddingBottom={40} flexDirection="row" alignItems="center" width={'76%'} justifyContent="space-between">
-                <ButtonBack/>
+                <ButtonBack onPress={() => navigate.navigate('Home')}/>
                 <Text fontSize={24} color="white">Delivery Status</Text>
             </View>
 
