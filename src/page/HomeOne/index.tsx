@@ -1,6 +1,6 @@
 
-import { Icon, Image, Input, InputField, InputIcon, InputSlot, MenuIcon, ScrollView, Text, VStack, View } from "@gluestack-ui/themed";
-import { Filter, FilterIcon, FilterX, FilterXIcon, Menu, Search, ShoppingBag, ShoppingBagIcon } from "lucide-react-native";
+import { Icon, Image, Input, InputField, InputIcon, InputSlot, ScrollView, Text, VStack, View } from "@gluestack-ui/themed";
+import { Filter, Menu, Search, ShoppingBag, ShoppingBagIcon } from "lucide-react-native";
 import BoxProduct from "../../components/BoxProduct";
 import BoxProductColor from "../../components/BoxProductColor";
 import { TouchableOpacity } from "react-native";
@@ -15,7 +15,7 @@ function HomeOne(){
         <ScrollView backgroundColor="#F3F4F9" height={'100%'} paddingTop={60} paddingHorizontal={24}>
             <View height={100}  display="flex" justifyContent="space-between" alignItems="flex-start" flexDirection="row">
                 <Icon as={Menu} color="black" size={40}/>
-            <TouchableOpacity onPress={() => navigate.navigate("OrderList")}>  
+            <TouchableOpacity onPress={() => navigate.navigate("OrderList" as never)}>  
                 <VStack justifyContent="center" alignItems="center">
                     <Icon as={ShoppingBag} color="#FFA451" size={40}/>
                     <Text>My Basket</Text>
@@ -51,8 +51,8 @@ function HomeOne(){
                 </View>
 
                 <View paddingTop={24} flexDirection="row" flexWrap="wrap" gap={23} justifyContent="center">
-                    <BoxProduct onPress={() => navigate.navigate("AddToBraket")}/>
-                    <BoxProduct onPress={() => navigate.navigate("AddToBraket")}/>
+                    <BoxProduct onPress={() => navigate.navigate("AddToBraket" as never)}/>
+                    <BoxProduct onPress={() => navigate.navigate("AddToBraket" as never)}/>
                 </View>
             </View>
 
@@ -65,10 +65,10 @@ function HomeOne(){
                 </View>
                 <ScrollView horizontal>
                     <View flexDirection="row" gap={10} width={'100%'} paddingTop={24}>
-                        <BoxProductColor color="#FFFAEB" onPress={() => navigate.navigate("AddToBraket")}/>
-                        <BoxProductColor color="#FEF0F0" onPress={() => navigate.navigate("AddToBraket")}/>
-                        <BoxProductColor color="#FFFAEB" onPress={() => navigate.navigate("AddToBraket")}/>
-                        <BoxProductColor color="#FEF0F0" onPress={() => navigate.navigate("AddToBraket")}/>
+                        <BoxProductColor color="#FFFAEB" onPress={() => navigate.navigate("AddToBraket" as never)}/>
+                        <BoxProductColor color="#FEF0F0" onPress={() => navigate.navigate("AddToBraket" as never)}/>
+                        <BoxProductColor color="#FFFAEB" onPress={() => navigate.navigate("AddToBraket" as never)}/>
+                        <BoxProductColor color="#FEF0F0" onPress={() => navigate.navigate("AddToBraket" as never)}/>
                     </View>
                 </ScrollView>
             </View>

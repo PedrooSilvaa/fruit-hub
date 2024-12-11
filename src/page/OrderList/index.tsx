@@ -18,7 +18,7 @@ export default function OrderList(){
     return (
         <View paddingTop={70} backgroundColor="#FFA451" height={'100%'} >
             <View paddingHorizontal={24} paddingBottom={40} flexDirection="row" alignItems="center" width={'70%'} justifyContent="space-between">
-                <ButtonBack onPress={() => navigate.navigate("Home")}/>
+                <ButtonBack onPress={() => navigate.navigate("Home" as never)}/>
                 <Text fontSize={24} color="white">My Basket</Text>
             </View>
 
@@ -90,7 +90,7 @@ export default function OrderList(){
                         </Input>
                     </View>
                     <View flexDirection="row" justifyContent="space-between" paddingHorizontal={24} paddingTop={40}>
-                        <TouchableOpacity onPress={() => navigate.navigate('TrackOrder')}>
+                        <TouchableOpacity onPress={() => navigate.navigate('TrackOrder'as never)}>
                             <Box
                                 borderColor="#FFA451"
                                 borderWidth={2}
@@ -154,7 +154,7 @@ export default function OrderList(){
                     <View width={'100%'} alignItems="center" gap={16} paddingHorizontal={45} paddingTop={24} flexDirection="row" justifyContent="space-between" >
                     <View gap={16}>
                     <Text fontSize={20} fontWeight={'medium'}>Date</Text>
-                        <Input width={'100'} paddingHorizontal={10} borderRadius={10} justifyContent="center" height={56} backgroundColor="#F3F1F1">
+                        <Input width={100} paddingHorizontal={10} borderRadius={10} justifyContent="center" height={56} backgroundColor="#F3F1F1">
                             <InputField
                                 placeholder='10/30'
                                 fontSize={20}
@@ -164,7 +164,7 @@ export default function OrderList(){
                     </View>
                     <View gap={16}>
                     <Text fontSize={20} fontWeight={'medium'}>CCV</Text>
-                        <Input width={'100'} paddingHorizontal={10} borderRadius={10} justifyContent="center" height={56} backgroundColor="#F3F1F1">
+                        <Input width={100} paddingHorizontal={10} borderRadius={10} justifyContent="center" height={56} backgroundColor="#F3F1F1">
                             <InputField
                                 placeholder='123'
                                 fontSize={20}
@@ -174,7 +174,7 @@ export default function OrderList(){
                     </View>
                     </View>
                     <View paddingHorizontal={24} height={170} marginTop={60} alignItems="center" backgroundColor="#FFA451" justifyContent="center">
-                        <TouchableOpacity onPress={() => navigate.navigate('TrackOrder')}>
+                        <TouchableOpacity onPress={() => navigate.navigate('TrackOrder' as never)}>
                             <Box
                                 backgroundColor="white"
                                 borderRadius={10}

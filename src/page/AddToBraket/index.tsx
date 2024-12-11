@@ -50,7 +50,7 @@ export default function AddToBraket({onPress} : AddProps){
                         <View backgroundColor="#FFF7F0" borderRadius={50} alignItems="center" justifyContent="center" width={50} height={50}>
                             <Icon as={Heart} color="#FFA451" size={30}/>
                         </View>
-                        <Button text="Add to Braket" size="220" onPress={() => navigate.navigate("OrderList")}/>
+                        <Button text="Add to Braket" size="220" onPress={() => navigate.navigate("OrderList" as never)}/>
                     </View>
                 </View>
             </View>
