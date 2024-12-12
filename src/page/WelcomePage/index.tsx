@@ -9,7 +9,7 @@ function WelcomePage(){
     return(
         <View height={'100%'} display="flex" alignItems="center">
             <View backgroundColor="#FFA451" width={"100%"} height={'60%'} display="flex" alignItems="center" justifyContent="flex-end" paddingBottom={50}>
-                <Image source={require('../../../assets/fruit-two.png')}/>
+                <Image source={require('../../../assets/fruit-two.png')} alt="plate"/>
             </View>
             <View height={"40%"} display="flex" alignItems="center" justifyContent="flex-start" paddingTop={40} width={'100%'} gap={42} backgroundColor="white">
                 <View gap={15} width={'80%'}>
@@ -23,7 +23,7 @@ function WelcomePage(){
                     </Input>
                 </View>
                 <View width={"80%"}>
-                    <Button text="Start Ordering" size="100%" onPress={() => navigate.navigate("Home")}></Button>
+                    <Button text="Start Ordering" size="100%" onPress={() => navigate.navigate("Home" as never)}></Button>
                 </View>
             </View>
         </View>

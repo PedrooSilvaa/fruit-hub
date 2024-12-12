@@ -7,7 +7,7 @@ export default function TrackOrder(){
     return(
         <View paddingTop={70} backgroundColor="#FFA451" height={'100%'}>
             <View paddingHorizontal={24} paddingBottom={40} flexDirection="row" alignItems="center" width={'76%'} justifyContent="space-between">
-                <ButtonBack onPress={() => navigate.navigate('Home')}/>
+                <ButtonBack onPress={() => navigate.navigate('Home' as never)}/>
                 <Text fontSize={24} color="white">Delivery Status</Text>
             </View>
 

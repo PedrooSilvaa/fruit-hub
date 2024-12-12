@@ -1,4 +1,4 @@
-import { Box, CloseIcon, Icon, Image, Input, InputField, ScrollView, Text, View } from "@gluestack-ui/themed";
+import { Box, CloseIcon, Image, Input, InputField, ScrollView, Text, View } from "@gluestack-ui/themed";
 import ButtonBack from "../../components/ButtonBack";
 import ItemRow from "../../components/ItemRow";
 import Button from "../../components/Button";
@@ -24,15 +24,6 @@ export default function OrderList(){
 
             <View backgroundColor="white" flex={1} paddingBottom={40}>
                 <ScrollView paddingHorizontal={24} paddingTop={40}>
-                    <ItemRow/>
-                    <ItemRow/>
-                    <ItemRow/>
-                    <ItemRow/>
-                    <ItemRow/>
-                    <ItemRow/>
-                    <ItemRow/>
-                    <ItemRow/>
-                    <ItemRow/>
                     <ItemRow/>
                     <ItemRow/>
                     <ItemRow/>
@@ -63,7 +54,7 @@ export default function OrderList(){
                 <View height={'50%'} justifyContent="flex-end" alignItems="center" paddingBottom={20}>
                      <TouchableOpacity onPress={() => setModal(false)}>
                         <View  height={50} width={50} opacity={1} backgroundColor="white" borderRadius={'100%'} padding={5}>
-                            <Icon as={CloseIcon} color="black"/>
+                            <CloseIcon color="black"/>
                         </View>
                      </TouchableOpacity>
                 </View>
@@ -124,7 +115,7 @@ export default function OrderList(){
                 <View height={'30%'} justifyContent="flex-end" alignItems="center" paddingBottom={20}>
                      <TouchableOpacity onPress={() => setModalCard(false)}>
                         <View  height={50} width={50} opacity={1} backgroundColor="white" borderRadius={'100%'} padding={5}>
-                            <Icon as={CloseIcon} color="black"/>
+                            <CloseIcon color="black"/>
                         </View>
                      </TouchableOpacity>
                 </View>
